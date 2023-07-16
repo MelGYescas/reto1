@@ -1,14 +1,19 @@
 /* Estilos para el cuerpo de la página */
+html {
+    width: 100%;
+    margin: 0 auto;
+}
 body {
     font-family: Arial, sans-serif;
-    margin: 20px 0;
     padding: 0;
+    margin: 2rem auto;
 }
+
 
 /* Estilos para el contenedor principal */
 .Main {
     width: 80%;
-    margin:  auto;
+    margin: auto;
     padding: 20px;
     background-color: #FFF;
     border-radius: 2rem;
@@ -30,6 +35,9 @@ body {
     text-shadow: 2px 2px 5px #C0DEFF;
 }
 
+.Header-summary {
+    width: 90%;
+}
 
 /* Estilos para la sección de contenido */
 .content {
@@ -40,11 +48,13 @@ body {
     border-collapse: collapse;
     width: 100%;
 }
-table th{
+
+table th {
     padding: .5rem 0;
     border: 2px solid #C0DEFF;
     background-color: #C0DEFF;
 }
+
 .table-row {
     border: 2px solid #C0DEFF;
 }
@@ -62,22 +72,24 @@ table th{
     color: #000000;
 }
 
-
-.fa-trash-can{
+.fa-trash-can {
     color: #FE0000;
 }
-.fa-pen-to-square{
-    color: #068FFF ;
 
+.fa-pen-to-square {
+    color: #068FFF;
 }
-.fa-floppy-disk{
+
+.fa-floppy-disk {
     color: #16FF00;
 }
-button{
+
+button {
     border: none;
     background-color: inherit;
 }
-input{
+
+input {
     padding: .5rem 0 .5rem .5rem;
     width: 100%;
     border: none;
@@ -93,4 +105,27 @@ input:focus {
     font-size: 1rem;
     outline: none;
     border: 2px solid #068FFF;
+}
+
+/* Estilos para hacer la tabla responsive */
+
+@media (max-width: 700px) {
+    html {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+    /* Estilos para el contenedor principal */
+    .Main {
+        width: 100%;
+    }
+    .table-row {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .table-row td,th {
+        padding-left: 1rem;
+        display: block;
+        text-align: left;
+    }
 }
