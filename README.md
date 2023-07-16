@@ -1,4 +1,4 @@
-# Reto 2
+# Reto 1
 
 ## Descripción
 Este proyecto es un desafío de prueba técnica número 2. Utiliza tecnologías web como JavaScript, CSS y HTML.
