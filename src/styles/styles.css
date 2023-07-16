@@ -1,0 +1,80 @@
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+    padding: 0;
+}
+
+/* Estilos para el contenedor principal */
+.Main {
+    width: 80%;
+    margin:  auto;
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 2rem;
+    border: 2px solid #C0DEFF;
+}
+
+/* Estilos para el encabezado */
+.Header-main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.Header-main a {
+    color: #000000;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px #C0DEFF;
+}
+
+
+/* Estilos para la sección de contenido */
+.content {
+    margin-top: 20px;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table th{
+    padding: .5rem 0;
+    border: 2px solid #C0DEFF;
+    background-color: #C0DEFF;
+}
+.table-row {
+    border: 2px solid #C0DEFF;
+}
+
+.table-row:hover {
+    background-color: #A9D2FF;
+}
+
+.table-row td {
+    padding: 8px;
+}
+
+.table-row a {
+    text-decoration: none;
+    color: #000000;
+}
+
+input{
+    width: 100%;
+}
+
+.fa-trash-can{
+    color: #FE0000;
+}
+.fa-pen-to-square{
+    color: #068FFF ;
+
+}
+
+button{
+    border: none;
+    background-color: inherit;
+}
