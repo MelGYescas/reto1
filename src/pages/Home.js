@@ -28,6 +28,7 @@ const Home = async () => {
             <th>Codigo</th>
             <th></th>
             <th></th>
+            <th></th>
             </tr>
         </thead>
         <tbody>

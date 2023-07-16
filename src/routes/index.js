@@ -16,37 +16,40 @@ const router = async () => {
   header.innerHTML = await Header();
   content.innerHTML = await Home();
 
-  // Agrega un evento de clic al elemento table
   const table = document.querySelector('table');
-  table.addEventListener('click', (e) => {
-    const targetElement = e.target;
-    
-    // Si se hizo clic en un ícono de basura
-    if (targetElement.classList.contains('fa-trash-can')) {
-      const value = targetElement.closest('.table-row').dataset.id;
-      const row = document.querySelector(`tr[data-id="${value}"]`);
-      eliminarRegistro(row);
-    }
-    
-    // Si se hizo clic en un botón de edición
-    else if (targetElement.closest('.edit-button')) {
-      const value = targetElement.closest('.table-row').dataset.id;
-      const row = document.querySelector(`tr[data-id="${value}"]`);
-      addRow(row);
-    }
+table.addEventListener('click', (e) => {
+  const targetElement = e.target;
+  
+  // Verifica si el botón de save está activo
+  const isSaveActive = document.querySelector('.save-button') !== null;
+  
+  // Si se hizo clic en un ícono de basura y el botón de save no está activo
+  if (targetElement.classList.contains('fa-trash-can') && !isSaveActive) {
+    const value = targetElement.closest('.table-row').dataset.id;
+    const row = document.querySelector(`tr[data-id="${value}"]`);
+    eliminarRegistro(row);
+  }
+  
+  // Si se hizo clic en un botón de edición y el botón de save no está activo
+  else if (targetElement.closest('.edit-button') && !isSaveActive) {
+    const value = targetElement.closest('.table-row').dataset.id;
+    const row = document.querySelector(`tr[data-id="${value}"]`);
+    addRow(row);
+  }
 
-    // Si se hizo clic en un botón de guardar
-    else if (targetElement.closest('.save-button')) {
-      const row = targetElement.closest('.table-row');
-      const newRow = row.previousElementSibling; 
-      guardarRegistro(row, newRow);
-      if (newRow) {
-        newRow.remove();
-      } else {
-        // console.log('newRow es null');
-      }
+  // Si se hizo clic en un botón de guardar
+  else if (targetElement.closest('.save-button')) {
+    const row = targetElement.closest('.table-row');
+    const newRow = row.previousElementSibling; 
+    guardarRegistro(row, newRow);
+    if (newRow) {
+      newRow.remove();
+    } else {
+      // console.log('newRow es null');
     }
-  });
+  }
+});
+
 };
 
 export default router;

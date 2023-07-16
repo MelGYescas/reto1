@@ -62,9 +62,6 @@ table th{
     color: #000000;
 }
 
-input{
-    width: 100%;
-}
 
 .fa-trash-can{
     color: #FE0000;
@@ -73,8 +70,27 @@ input{
     color: #068FFF ;
 
 }
-
+.fa-floppy-disk{
+    color: #16FF00;
+}
 button{
     border: none;
     background-color: inherit;
+}
+input{
+    padding: .5rem 0 .5rem .5rem;
+    width: 100%;
+    border: none;
+    box-shadow: 2px 2px 2px #068FFF;
+    font-size: 1rem ;
+}
+
+input:focus {
+    padding: .5rem 0 .5rem .5rem;
+    width: 100%;
+    border: none;
+    box-shadow: 2px 2px 2px #068FFF;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid #068FFF;
 }

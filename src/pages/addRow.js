@@ -14,7 +14,7 @@ const addRow = (row) => {
     <td><i class="fa-solid fa-trash-can"></i></td>
     <td><button class="edit-button"><i class="fa-solid fa-pen-to-square"></i></button></td>
     <td><button class="save-button"><i class="fa-solid fa-floppy-disk"></i></button></td>
-  `;
+    `;
 
   const saveButton = newRow.querySelector('.save-button');
   saveButton.addEventListener('click', () => {
